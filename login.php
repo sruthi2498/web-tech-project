@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html>
-<head></head>
+<head>
+    <style>
+        body{
+            background-color:blue;
+            color:black;
+            font-size:30;
+            font-family:courier new;
+        }
+    </style>
+</head>
 <body>
     <?php
     session_start();
