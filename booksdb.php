@@ -38,7 +38,9 @@
             (id,name,author,genre,descr)
             VALUES('$a','$b','$c','$d','$e')";  
     /*
-    
+    <<<<<<<<<<<Mukesh.M.Karanth>>>>>>>>>>>>>>>>
+    check wether this syntax is right .... 
+    -------------------------------------
     $a1="050";
     $b1="The Diary of a Nobody";
     $c1="George Grossmith and Weeden Grossmith";
