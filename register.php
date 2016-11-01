@@ -44,11 +44,11 @@ if (mysqli_num_rows($result) > 1) {
     while($row = mysqli_fetch_assoc($result)) {
         //echo "usr: " . $row["username"]. " - pswd: " . $row["password"]. "email- " . $row["email"]. "<br>";
         if($n==$row["username"]){
-            echo $row["username"]." username taken <br>";
+            echo "<h3 style =  'font-family:courier new;font-size:20;background-color:black;color:red;'>".$row["username"]." username taken... <br>"."</h3>";
             $i=0;
         }
         if($e==$row["email"]){
-            echo $row["email"]." email taken <br>";
+            echo "<h3 style =  'font-family:courier new;font-size:20;background-color:black;color:white;'>".$row["email"]." email taken... <br>"."</h3>";
             $i=0;
         }
     }
@@ -59,7 +59,7 @@ if($i==1){
             VALUES
             ('$n','$p','$e')";
     if (mysqli_query($conn, $sql1)) {
-    echo "New record created successfully";
+    echo "<h3 style = 'font-family:comic sans ms;font-size:40;background-color:yellow;color:green;'>"."New record created successfully !!!<br\>"."</h3>";
     } 
     else {
     echo "Error: " . $sql1 . "<br>" . mysqli_error($conn);
