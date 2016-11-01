@@ -34,23 +34,23 @@
             //echo "usr: " . $row["username"]. " - pswd: " . $row["password"]. "email- " . $row["email"]. "<br>";
             if($n==$row["username"]){
                 if($p==$row["password"]){
-                    echo "correct";
+                    echo "<h3 style = 'color:green'><b>"."Correct !"."</b></h3>";
                     $i=1;
 
                 }
                 else{
-                    echo "incorrect password";
+                    echo "<h3 style = 'color:red'><b>"."Incorrect password !"."</b></h3>";
                     $i=0;
                 }
             }
         }
     }
     if($i==0){
-        echo "<br><a href='login.html'>Retry</a>";
+        echo "<br><a href='login.html'>Retry...</a>";
        
     }
     else{
-        echo "<br/>Login successful<br><a href='yourpage.php'>Your page-</a>";
+        echo "<br/>Login successful !!! <br><a href='yourpage.php'>Your page-</a>";
     }
 
     $conn->close();
