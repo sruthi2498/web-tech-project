@@ -37,7 +37,51 @@
     $sql1="INSERT INTO booksdb
             (id,name,author,genre,descr)
             VALUES('$a','$b','$c','$d','$e')";  
+    /*
+    
+    $a1="050";
+    $b1="The Diary of a Nobody";
+    $c1="George Grossmith and Weeden Grossmith";
+    $d1="comedy";
+    $e1=" It was originally written for Punch. It’s also pretty wonderful social history.";
+    $sql1="INSERT INTO booksdb(id,name,author,genre,descr)VALUES('$a1','$b1','$c1','$d1','$e1')";  
 
+    $a2="051";
+    $b2="Three Men in a Boat";
+    $c2="Jerome K Jerome";
+    $d2="comedy";
+    $e2="a work of comic delight,";
+    $sql1="INSERT INTO booksdb(id,name,author,genre,descr)VALUES('$a2','$b2','$c2','$d2','$e2')";  
+    
+    $a3="052";
+    $b3="Cold Comfort Farm";
+    $c3="Stella Gibbons";
+    $d3="comedy";
+    $e3=" a satire that seems to have lasted better than its targets.";
+    $sql1="INSERT INTO booksdb(id,name,author,genre,descr)VALUES('$a1','$b1','$c1','$d1','$e1')";  
+
+    $a4="060";
+    $b4="The Exorcist";
+    $c4="William Peter Blatty";
+    $d4="horror";
+    $e4 = “Inspired by real events, Blatty’s story of demonic possession and exorcism cuts right to the quick. ";
+    $sql1="INSERT INTO booksdb(id,name,author,genre,descr)VALUES('$a1','$b1','$c1','$d1','$e1')";  
+
+    $a5="061";
+    $b5="Dracula";
+    $c5="Bram Stoker";
+    $d5="horror";
+    $e5="The finest example of Victorian gothic horror. ";
+    $sql1="INSERT INTO booksdb(id,name,author,genre,descr)VALUES('$a1','$b1','$c1','$d1','$e1')";  
+
+    $a6="062";
+    $b6="The Shining";
+    $c6=" Stephen King";
+    $d6="horror";
+    $e6=" centers on the life of Jack Torrance, an aspiring writer and recovering alcoholic.";
+    $sql1="INSERT INTO booksdb(id,name,author,genre,descr)VALUES('$a1','$b1','$c1','$d1','$e1')";  
+
+    */
     if (mysqli_query($conn, $sql1)) {
     echo "New record created successfully<br>";
     } 
