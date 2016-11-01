@@ -75,11 +75,11 @@ $result = mysqli_query($conn, $sql);
 if (mysqli_num_rows($result) > 0) {
     // output data of each row
     while($row = mysqli_fetch_assoc($result)) {
-        echo "usr: " . $row["username"]. " - pswd: " . $row["password"]. "email- " . $row["email"]. "<br>";
+        echo "<h2 style = 'font-family:calibri;background-color:black;color:white;'>"."usr: " . $row["username"]. " - pswd: " . $row["password"]. "email- " . $row["email"]. "<br>"."</h2>";
     }
 } 
 else {
-    echo "0 results";
+    echo "<h2>"."0 results found ...<br/>"."</h2>";
 }
 /*$sql = "SELECT username FROM user";
 $result = mysqli_query($conn, $sql);  
