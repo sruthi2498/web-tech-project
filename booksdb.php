@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<body>
+<body style = ''>
 
 <?php
     extract ($_POST);
