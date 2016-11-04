@@ -1,7 +1,14 @@
 <!DOCTYPE html>
 <html>
-<body>
-
+<body style = 'font-family: "Andalus", Times, serif;
+	font-size: 200%;
+	position: absolute;
+	left: 0;	
+	right: 0;
+	width:auto;
+	text-align:center;
+	color:white;'>
+<div style = 'background-color:#333;'>
 <?php
     extract ($_POST);
     $servername = "localhost";
@@ -106,7 +113,7 @@ if (mysqli_num_rows($result) > 1) {
     }
 }*/
 $conn->close();
-
 ?>
+</div>
 </body>
 </html>
