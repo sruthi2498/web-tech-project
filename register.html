@@ -1,38 +1,132 @@
 <html>
-<head>
+<head><link rel="stylesheet" type="text/css" href="styleTheme.css">
 <script>
-
-    /*function test(){
-        //alert("in test");
-        var usr=document.getElementById("1").value;
-        var pswd=document.getElementById("2").value;
-        var div2=document.getElementById("3");
-        var x="less length";
-        //alert(usr+" "+pswd+" "+x);
-        if(pswd.length<8){
-            alert("too less");
-            /*var new1=document.createElement("div");
-            var para=document.createTextNode("less length");
-            new1.appendChild(para);
-            var div1=document.getElementById("div1");
-            div1.appendChild(new1);
+    var usr=document.getElementById("1");
+    var pswd=document.getElementById("2");
+    var email=document.getElementById("3");
+    var right=0;
+    var right2=0;
+    function testpassword(){
+        var usr=document.getElementById("1");
+        var pswd=document.getElementById("2");
+        var email=document.getElementById("3");
+        var right=1;
+        var pswd2=document.getElementById("2").value;
+        if(pswd2.length<8){
+            alert("less length.Retry");
+            right=0;
+           // usr.value="";
+            pswd.value="";
+            email.value="";
+        }
+        if(right==1){
+            var i=0;
+            var num=0;
+            var alpha=0;
+            var spe=0;
+            while(i<pswd2.length){
+                var n=pswd2.charCodeAt(i);
+                if(n>48&&n<57){
+                    num++;
+                }
+                if(n>33&&n<47){
+                    spe++;
+                }
+                i++;
+            }
+            if(num<3){
+                alert("digits less than 3.retry");
+                right=0;
+                //usr.value="";
+                pswd.value="";
+                email.value="";
+                return;
+            }
+            if(spe<1){
+                alert("atleast one special character.retry");
+                right=0;
+               // usr.value="";
+                pswd.value="";
+                email.value="";
+                return;
+            }
+            else{alert("Password okay");right=1;}
+            
+        }
+        if(right==1){
+             testemail();
+    
         }
         
-
-    }*/
+    }
+    function testemail(){
+        var usr=document.getElementById("1");
+        var pswd=document.getElementById("2");
+        var email=document.getElementById("3");
+        var email2=document.getElementById("3").value;
+        if(email2.indexOf('.com')==-1){
+            alert("invalid email");
+            right2=0;
+            //usr.value="";
+            //pswd.value="";
+            email.value="";
+            return;
+        }
+        if(email2.indexOf('@')==-1){
+            alert("invalid email");
+            right2=0;
+           // usr.value="";
+            //pswd.value="";
+            email.value="";
+            return;
+        }
+         else{alert("email okay");right2=1;}
+     
+        done();
+    }
+    
+    function done(){
+        var add=document.createElement("button");
+        alert(add);
+        add.innerHTML="submit";
+        var div1=document.getElementById("div1");
+        div1.appendChild(add);
+        add.onclick=function(){
+            alert("sure to submit?");
+        }
+        /*add.setAttribute("type","button");
+        add.setAttribute("value","submit");
+        alert(add);*/
+    }
+    
 </script>
 </head>
-<body>
+<body><br><br><br><br><br><br>
+    <div align="center"  class="heading">
+        Register:
 <form action="register.php" method="post">
-    <input type="text" id="1" name="username" placeholder="name"/>
+    <p style="font-size: 50%">Enter username:</p>
+
+    <input type="text" id="1" name="username" placeholder="username" value=""/>
     <br/>
-    <input type="password" id="2" name="pswd" placeholder="password"/>
-    <br/>
+     <p style="font-size: 50%">Enter password: <br>
+            ->Should be more than 8 characters<br>-> Must have atleast 3 digits<br>->Must have atleast 1 special character
+            
+
+
+     </p>
+
+    <input type="password" id="2" name="pswd" placeholder="password" value=""/>
+   <br>
+     <p style="font-size: 50%">Enter email:</p>
     <input type="text" id="3" name="email" placeholder="email"/>
-    <br/>
-    <input type="submit">
+     <span id="4"><br/></span>
+      <input type="button" onclick="testpassword();" value="Check"/><br/>
+    
+    
     <div id="div1"></div>
 </form>
- <div id="3"><br/></div>
+ <div id="div3"></div>
+ <div>
 <body>
 </html>

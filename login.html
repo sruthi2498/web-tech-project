@@ -1,17 +1,64 @@
 <html>
 <head>
     <script type="text/javascript"></script>
+    <style>
+    	#top
+    	{
+	    	background-color:#333;
+			font-family: "Andalus", Times, serif;
+			font-size: 200%;
+			position: relative;
+			left: 0;	
+			right: 0;
+			width:auto;
+			text-align:center;
+			color:white;
+			text-align:center;
+		}
+		body
+		{
+			font-size:30;
+			font-family:"Andalus", Times, serif;
+			color:grey;
+		}
+		#btn
+		{
+			height : 50;
+			width : 250 ;
+			background-color:black;
+			color:white;
+			font-family:"Andalus", Times, serif;
+			font-size:30;
+		}
+		#box1
+		{
+			height:50;
+			width:250;
+			font-size:25;
+		}
+		#box2
+		{
+			height:50;
+			width:250;
+			font-size:25;
+		}
+    </style>
 </head>
-<body>
-<form action="login.php" method="post">
-    login:<br>
-    <input type="text" id="1" name="username" placeholder="name"/>
-    <br/>
-    <input type="password" id="2" name="pswd" placeholder="password"/>
-    <br/>
-    <input type="submit">
+<body style = "text-align:center">
+<div id = "top">
+	Login :-
+	<br><br><br>
+</div>
+<br><br>
+<form action="login.php" method="post" >
+    Username : <input type="text" id="box1" name="username" placeholder="username"/>
+    <br/><br>
+    Password : <input type="password" id="box2" name="pswd" placeholder="password"/>
+    <br/><br><br>
+    <input type="submit" value = "Login" id = "btn">
     <div id="div1"></div>
 </form>
+
  <div id="3"><br/></div>
 <body>
 </html>

@@ -1,15 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<style>
-		body
-		{
-			font-size:30;
-			font-family: "Andalus", Times, serif;
-		
-		}
-	</style>
-</head>
 <body>
 
 <?php
@@ -36,7 +27,7 @@
             while($row = mysqli_fetch_assoc($result)) {
                 //echo "usr: " . $row["username"]. " - pswd: " . $row["password"]. "email- " . $row["email"]. "<br>";
                 if($a==$row["username"]){
-                    echo "<h3 style = 'color:red'>"$row["username"]." username taken <br>"."</h3>";
+                    echo $row["username"]." username taken <br>";
                     $i=0;
                 }
             
@@ -45,7 +36,7 @@
         if($i==1){        
         $sql="UPDATE userinfo SET username='$new' WHERE username='$n'";}
         else{
-             echo "<h3>"."<a href='alter1.php'>go back to retry</a> <br>"."</h3>";
+             echo "<a href='alter1.php'>go back to retry</a> <br>";
         }
     }
     if($a=="2"){
@@ -77,7 +68,7 @@ if (mysqli_num_rows($result) > 0) {
     }
 } 
 else {
-    echo "<h3 style = 'color:red'>"."0 results"."</h3>";
+    echo "0 results";
 }
     
 ?>

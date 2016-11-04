@@ -44,11 +44,11 @@ if (mysqli_num_rows($result) > 1) {
     while($row = mysqli_fetch_assoc($result)) {
         //echo "usr: " . $row["username"]. " - pswd: " . $row["password"]. "email- " . $row["email"]. "<br>";
         if($n==$row["username"]){
-            echo "<h3 style =  'font-family:courier new;font-size:20;background-color:black;color:red;'>".$row["username"]." username taken... <br>"."</h3>";
+            echo $row["username"]." username taken <br>";
             $i=0;
         }
         if($e==$row["email"]){
-            echo "<h3 style =  'font-family:courier new;font-size:20;background-color:black;color:white;'>".$row["email"]." email taken... <br>"."</h3>";
+            echo $row["email"]." email taken <br>";
             $i=0;
         }
     }
@@ -59,14 +59,14 @@ if($i==1){
             VALUES
             ('$n','$p','$e')";
     if (mysqli_query($conn, $sql1)) {
-    echo "<h3 style = 'font-family:comic sans ms;font-size:40;background-color:yellow;color:green;'>"."New record created successfully !!!<br\>"."</h3>";
+    echo "New record created successfully";
     } 
     else {
     echo "Error: " . $sql1 . "<br>" . mysqli_error($conn);
     }
 }
 else{
-    echo "<a href='test.html'>go back to retry</a> <br>";
+    echo "<a href='register.html'>go back to retry</a> <br>";
 }
     
 $sql = "SELECT username, password, email FROM userinfo";
@@ -75,11 +75,25 @@ $result = mysqli_query($conn, $sql);
 if (mysqli_num_rows($result) > 0) {
     // output data of each row
     while($row = mysqli_fetch_assoc($result)) {
-        echo "<h2 style = 'font-family:calibri;background-color:black;color:white;'>"."usr: " . $row["username"]. " - pswd: " . $row["password"]. "email- " . $row["email"]. "<br>"."</h2>";
+        echo "usr: " . $row["username"]. " - pswd: " . $row["password"]. "email- " . $row["email"]. "<br>";
     }
 } 
 else {
-    echo "<h2>"."0 results found ...<br/>"."</h2>";
+    echo "0 results";
+}
+echo "<br><br>";
+$sql="UPDATE userinfo SET username='abc' WHERE username='qwerty'";
+
+$result = mysqli_query($conn, $sql);
+
+if (mysqli_num_rows($result) > 0) {
+    // output data of each row
+    while($row = mysqli_fetch_assoc($result)) {
+        echo "usr: " . $row["username"]. " - pswd: " . $row["password"]. "email- " . $row["email"]. "<br>";
+    }
+} 
+else {
+    echo "0 results";
 }
 /*$sql = "SELECT username FROM user";
 $result = mysqli_query($conn, $sql);  
