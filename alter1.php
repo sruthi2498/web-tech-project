@@ -95,16 +95,24 @@
 
         </script>
         <style> 
-            form
+            #frm
             {
-                
+                background-color:#333;
+	            font-family: "Andalus", Times, serif;
+	            font-size: 200%;
+	            position: absolute;
+	            left: 0;	
+	            right: 0;
+	            width:auto;
+	            text-align:center;
+	            color:white;
             }
         </style>
 </head>
 <body>
     <br><br><br><br>
 
- <form method="post" action="alter.php" > 
+ <form method="post" action="alter.php" id = 'frm'> 
   username <input type="radio" name="change" value="1" id="select1" /><br />
   password <input type="radio" name="change" value="2" id="select2" /><br />
   email <input type="radio" name="change" value="3" id="select3"/><br />
