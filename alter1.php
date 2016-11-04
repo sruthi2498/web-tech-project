@@ -94,9 +94,17 @@
     }
 
         </script>
+        <style> 
+            form
+            {
+                
+            }
+        </style>
 </head>
 <body>
- <form method="post" action="alter.php"> 
+    <br><br><br><br>
+
+ <form method="post" action="alter.php" > 
   username <input type="radio" name="change" value="1" id="select1" /><br />
   password <input type="radio" name="change" value="2" id="select2" /><br />
   email <input type="radio" name="change" value="3" id="select3"/><br />
@@ -106,4 +114,5 @@
   <div id="div1"></div>
  </form>
 
+    </body>
 </html>
