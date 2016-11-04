@@ -16,6 +16,8 @@
      </style>
 </head>
 <body style = 'font-family: "Andalus", Times, serif;font-size:20;'>
+<div>
+	<br><br>
 
 <?php
      session_start();
@@ -86,7 +88,7 @@ else {
 }
     
 ?>
-
+</div>
 <!--</form> -->
 </body>
 </html>
