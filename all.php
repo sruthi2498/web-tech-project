@@ -1,6 +1,14 @@
 <html><head><link rel="stylesheet" type="text/css" href="styleTheme.css">
 <head>
-<body style='background-color:#333'>
+<body style='background-color:#333;
+	font-family: "Andalus", Times, serif;
+	font-size: 200%;
+	position: absolute;
+	left: 0;	
+	right: 0;
+	width:auto;
+	text-align:center;
+	color:white;'>
     <?php
     session_start();
     extract ($_SESSION);
