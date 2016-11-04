@@ -1,7 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-<body>
+     <style>
+          div{
+               background-color:#333;
+	          font-family: "Andalus", Times, serif;
+	          font-size: 200%;
+	          position: absolute;
+	          left: 0;	
+	          right: 0;
+	          width:auto;
+	          text-align:center;
+	          color:white;
+          }
+     </style>
+</head>
+<body style = 'font-family: "Andalus", Times, serif;font-size:20;'>
 
 <?php
      session_start();
@@ -73,6 +87,6 @@ else {
     
 ?>
 
-</form> 
+<!--</form> -->
 </body>
 </html>
