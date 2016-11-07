@@ -1,0 +1,115 @@
+
+.heading{
+    background-color:#333;
+	font-family: "Andalus", Times, serif;
+	font-size: 200%;
+	font-style:bold;
+	position: absolute;
+	left: 0;	
+	right: 0;
+	width:auto;
+	text-align:center;
+	color:white;
+}
+.right{
+	background-color:black;
+	right:0px;
+	top:0px;
+	width: 300px;
+	height:1000px;
+	position:absolute;
+}
+.left{
+	background-color:black;
+	left:0px;
+	top:0px;
+	width: 250px;
+	height:1000px;
+	position:absolute;
+}
+.marquee
+{
+    background-color:class;
+	font-family: "Andalus", Times, serif;
+	font-size: 300%;
+	position: relative;
+	left: 0;	
+	right: 0;
+	top:150px;
+	width:auto;
+	color:white;	
+	
+	
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+	position:absolute;
+	top: 200px;
+	left:0;
+	width: auto;
+}
+
+.textbox
+{
+position:relative;
+top: 650px;
+left: 180px;
+width: 1000px;
+font-family:"Times New Roman", Times, serif;	
+font-style:italic;
+color:white;
+background-color:black;	
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 20px 57px;
+    text-decoration: none;
+	font-size: 20px;
+	font-family: "Andalus", Times, serif;
+}
+
+li a:hover:not(.active) {
+    background-color: #7171da;
+}
+
+.active {
+    background-color: #3333cc;
+}
+.slideShow {display:none;
+          position:absolute;
+		  left:250px;
+		  top:270px;
+		   }
+.slideShow2 {display:none;
+          position:absolute;
+		  left:0;
+		  top:270px;
+		   }
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 2s;
+  animation-name: fade;
+  animation-duration: 2s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}

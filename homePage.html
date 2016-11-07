@@ -1,0 +1,89 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="styleTheme2.css">
+<div class="heading"><h1>BOOK WORM</h1></div>
+</head>
+<body>
+<div>
+  
+<ul>
+  <li><a class="active" href="homePage.html">Home</a></li>
+  <li><a href="currentEvents.html">Current Events</a></li>
+  <li><a href="contact.html">Contact</a></li>
+  <li><a href="about.html">About</a></li>
+  <li><a href="login.html">Login</a><li>
+  <li><a href="register.html">Create an account</a><li>
+  <li><a href="reviews.php">Reviews</a><li>
+</ul>
+  
+ 
+  <img class="slideShow fade" src="image1.jpg" style="width:60%">
+  <img class="slideShow fade" src="image2.jpg" style="width:60%">
+  <img class="slideShow fade" src="image4.jpg" style="width: 60%">
+  <img class="slideShow fade" src="image5.jpg" style="width: 100%">
+  
+
+  
+  <div class="left" style="top:270px"></div>
+  <div class="right" style="top:270px"></div>
+</div>
+<div class="textbox" >
+<br><br><br>
+"Good friends, good books, and a sleepy conscience: this is the ideal life.” 
+<br>
+― Mark Twain
+<br><br><br>
+</div>
+<div class="textbox" style="top:680px">
+<br><br><br>
+“Fairy tales are more than true: not because they tell us that dragons exist, but because they tell us that dragons can be beaten.” 
+<br>
+― Neil Gaiman, Coraline
+<br><br><br>
+</div>
+<div class="textbox" style="top:710px">
+<br><br><br>
+“... a mind needs books as a sword needs a whetstone, if it is to keep its edge.” 
+<br>
+― George R.R. Martin, A Game of Thrones
+<br><br><br>
+</div>
+<div class="textbox" style="top:740px">
+<br><br><br>
+“Books are the quietest and most constant of friends; they are the most accessible and wisest of counselors, and the most patient of teachers.” 
+<br>
+― ― Charles William Eliot 
+<br><br><br>
+</div>
+<script>
+var myIndex = 0;
+pictureChange1();
+var myIndex2=0;
+pictureChange2();
+
+function pictureChange1() {
+    var i;
+    var x = document.getElementsByClassName("slideShow");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(pictureChange1, 3000); 
+}
+function pictureChange2() {
+    var i;
+    var x = document.getElementsByClassName("slideShow2");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    myIndex2++;
+    if (myIndex2 > x.length) {myIndex2 = 1}
+    x[myIndex2-1].style.display = "block";
+    setTimeout(pictureChange2, 3000); 
+}
+</script>
+</body>
+</head>
+</html>
