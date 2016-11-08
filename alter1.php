@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><link rel="stylesheet" type="text/css" href="styleTheme.css">
     <script>
       function test(){
         var right=1;
@@ -76,7 +76,6 @@
         if(right==1){
           done();
         }
-
       }
     }
        function done(){
@@ -92,35 +91,37 @@
         add.setAttribute("value","submit");
         alert(add);*/
     }
-
         </script>
         <style> 
             #frm
             {
                 background-color:#333;
-	            font-family: "Andalus", Times, serif;
-	            font-size: 200%;
-	            position: absolute;
-	            left: 0;	
-	            right: 0;
-	            width:auto;
-	            text-align:center;
-	            color:white;
+                font-family: "Andalus", Times, serif;
+                font-size: 200%;
+                position: absolute;
+                left: 200px;    
+                right: 200px;
+                width:auto;
+                text-align:center;
+                color:white;
             }
         </style>
 </head>
 <body>
     <br><br><br><br>
 
- <form method="post" action="alter.php" id = 'frm'> 
+ <form method="post" action="alter.php" id = 'frm'>
+  <p style = 'font-family:courier new;font-size:35;color:yellow;'>Choose to change your account parameters :-</p>
   username <input type="radio" name="change" value="1" id="select1" /><br />
   password <input type="radio" name="change" value="2" id="select2" /><br />
   email <input type="radio" name="change" value="3" id="select3"/><br />
-  Enter new:
+  Enter the new value : 
   <input type="text" name="new" id="new" />
   <input type="button" value="check" onclick="test()" />
   <div id="div1"></div>
  </form>
-
+<div class="home"><a href="home.html">HOME</a></div>
+     <div class="logout"><a href="login.html">LOGOUT</a></div>
+     <div class="userpage"><a href="userpage.php">YOUR PAGE</a></div>
     </body>
 </html>

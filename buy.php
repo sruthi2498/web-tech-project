@@ -3,6 +3,13 @@
     function pay(){
         var p1=document.getElementById('cod');
         var p2=document.getElementById('card');
+        if(p1.checked){
+            var add5=document.createElement("button");
+                        var d=document.getElementById('cardno');
+
+            add5.innerHTML="Submit";
+            d.appendChild(add5);
+        }
         if(p2.checked){
             var d=document.getElementById('cardno');
             var add1=document.createElement('p');
@@ -23,15 +30,10 @@
             add.setAttribute("name","cardno");
            // add.type=text;
             d.appendChild(add4);
-            var add4=document.createElement("button");
-            add4.innerHTML="Submit";
-            add4.click=function{
-                var p=alert("Sure?");
-                if(p==TRUE){
-                    var q=alert("Do you want us to remember your details?");
-                    
-                }
-            }
+            var add5=document.createElement("button");
+            add5.innerHTML="Submit";
+            d.appendChild(add5);
+            
         }
     }
 </script>
@@ -54,6 +56,8 @@
    $genre= $_SESSION["genre"];
     $descr=$_SESSION["descr"];
     $img=$_SESSION["img"];
+     $price=$_SESSION["price"];
+
    $quantity= $_SESSION["quantity"];
    if($quantity==0){
         echo "<div id='wrong'>Out of stock<br></div>
@@ -63,16 +67,20 @@
         echo "<div class='buy'>Read ".$name." by ".$author.
         "<img src='$img' height='175px' width='135px' align='right'>
         <br><p style='align:left;font-size:20px'>    
-                   A small description-<br><p> ".$descr."</p></p></div>";
+                   A small description-<br><p> ".$descr."</p></p>
+        <div align='center' style='border: 2px solid #00ffcc; background-color:white; color:black; height: 50px; width: 100px;
+             position:absolute;
+             right: 10px;'><h3> ".$price."</h3></div>
+        </div>";
         echo "<div class='buy' style='top:300px;text-align:center;border:0px;background-color:#3333cc;font-size:20px'>Payment option:
-        <form>
+        <form method='post' action='buybook.php'>
         <input type='radio' value='cod' name='cod' id='cod'>Cash on Delivery<br>
         <input type='radio' value='card' name='card' id='card'>Credit Card<br>
         <input type='button' value='payment option' onclick='pay();'/><br><br><br>
         Delivery to:<br>
-        <input type='text' id='name'/><br>
+        <input type='text' id='name' name='name'/><br>
         address:<br>
-        <input type='text' id='add'/><br>
+        <input type='text' id='add' name='add'/><br>
         <div id='cardno'></div>
         </form>
 
@@ -82,5 +90,11 @@
     
    
 
-    ?></body>
+    ?>
+
+ <div class="home"><a href="home.html">HOME</a></div>
+     <div class="logout"><a href="login.html">LOGOUT</a></div>
+     <div class="userpage"><a href="userpage.php">YOUR PAGE</a></div>
+
+</body>
 </html>

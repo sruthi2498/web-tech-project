@@ -1,23 +1,19 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><link rel="stylesheet" type="text/css" href="styleTheme.css">
      <style>
           div{
                background-color:#333;
-	          font-family: "Andalus", Times, serif;
-	          font-size: 200%;
-	          position: absolute;
-	          left: 0;	
-	          right: 0;
-	          width:auto;
-	          text-align:center;
-	          color:white;
+              font-family: "Andalus", Times, serif;
+              width:auto;
+              text-align:center;
+              color:white;
           }
      </style>
 </head>
 <body style = 'font-family: "Andalus", Times, serif;font-size:20;'>
 <div>
-	<br><br>
+    <br><br>
 
 <?php
      session_start();
@@ -32,7 +28,6 @@
     //echo $_SESSION["username"]." ".$_SESSION["pswd"];
     $n=$_SESSION["username"];
     $p=$_SESSION["pswd"];
-
     $a=$_POST["change"];
     $new=$_POST["new"];
     $i=1;
@@ -62,21 +57,17 @@
         $sql="UPDATE userinfo SET email='$new' WHERE username='$n'";
      
     }
-
-
     $result = mysqli_query($conn, $sql);
-
     
     
     if (mysqli_query($conn, $sql)) {
-    echo "New record created successfully<br>";
+    echo "<h1>CHANGE IMPLEMENTED!</h1><br>";
     } 
     else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn). "<br>" ;
     }
-    $sql = "SELECT username, password, email FROM userinfo";
+ /*   $sql = "SELECT username, password, email FROM userinfo";
 $result = mysqli_query($conn, $sql);
-
 if (mysqli_num_rows($result) > 0) {
     // output data of each row
     while($row = mysqli_fetch_assoc($result)) {
@@ -85,10 +76,15 @@ if (mysqli_num_rows($result) > 0) {
 } 
 else {
     echo "0 results";
-}
+}*/
+
+    
     
 ?>
 </div>
 <!--</form> -->
+<div class="home"><a href="home.html">HOME</a></div>
+     <div class="logout"><a href="login.html">LOGOUT</a></div>
+     <div class="userpage"><a href="userpage.php">YOUR PAGE</a></div>
 </body>
 </html>
