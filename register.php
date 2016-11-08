@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <body style = 'font-family: "Andalus", Times, serif;
-	font-size: 200%;
-	position: absolute;
-	left: 0;	
-	right: 0;
-	width:auto;
-	text-align:center;
-	color:white;'>
+    font-size: 200%;
+    position: absolute;
+    left: 0;    
+    right: 0;
+    width:auto;
+    text-align:center;
+    color:white;'>
 <div style = 'background-color:#333;'>
 <?php
     extract ($_POST);
@@ -43,8 +43,6 @@
     $n=$_POST["username"];
     $p=$_POST["pswd"];
     $e=$_POST["email"];
-
-
 $sql = "SELECT username,email FROM userinfo";
 $result = mysqli_query($conn, $sql);  
 if (mysqli_num_rows($result) > 1) {
@@ -66,7 +64,7 @@ if($i==1){
             VALUES
             ('$n','$p','$e')";
     if (mysqli_query($conn, $sql1)) {
-    echo "New record created successfully";
+    echo "REGISTERED! <a href='login.html'> LOGIN HERE</a>";
     } 
     else {
     echo "Error: " . $sql1 . "<br>" . mysqli_error($conn);
@@ -76,9 +74,8 @@ else{
     echo "<a href='register.html'>go back to retry</a> <br>";
 }
     
-$sql = "SELECT username, password, email FROM userinfo";
+/*$sql = "SELECT username, password, email FROM userinfo";
 $result = mysqli_query($conn, $sql);
-
 if (mysqli_num_rows($result) > 0) {
     // output data of each row
     while($row = mysqli_fetch_assoc($result)) {
@@ -90,9 +87,7 @@ else {
 }
 echo "<br><br>";
 $sql="UPDATE userinfo SET username='abc' WHERE username='qwerty'";
-
 $result = mysqli_query($conn, $sql);
-
 if (mysqli_num_rows($result) > 0) {
     // output data of each row
     while($row = mysqli_fetch_assoc($result)) {
@@ -101,7 +96,7 @@ if (mysqli_num_rows($result) > 0) {
 } 
 else {
     echo "0 results";
-}
+}*/
 /*$sql = "SELECT username FROM user";
 $result = mysqli_query($conn, $sql);  
 if (mysqli_num_rows($result) > 1) {
@@ -115,5 +110,8 @@ if (mysqli_num_rows($result) > 1) {
 $conn->close();
 ?>
 </div>
+
+<div class="home"><a href="home.html">HOME</a></div>
 </body>
+
 </html>

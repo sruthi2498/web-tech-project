@@ -88,11 +88,12 @@ div.right{
 	color:black;
 }
 div.book{
-	position: absolute;
 	text-align: center;
 	 font-family: "Andalus", Times, serif;
 	font-size:20px;
 	color:white;
+	
+	
 	}
 div.break{
 
@@ -111,9 +112,48 @@ div.button{
 div.buy{
 	position: absolute;
 	background-color: #333;
-	left:100px;
-	right:100px;
+	left:200px;
+	right:200px;
 	font-family: "Andalus", Times, serif;
 	color:white;
 	border: 3px solid black;
+}
+div.comment{
+	 height:30px;
+	 right:0px;
+	 position:absolute;
+	 background-color: #cc66ff;
+}
+div.home{
+	height:50px;
+	width:150px;
+	position: absolute;
+	background-color: white;
+	border:6px solid #333;
+	right:0px;
+	top: 0px;
+	color: black;
+	text-align:center;
+}
+div.logout{
+	height:50px;
+	width:150px;
+	position: absolute;
+	background-color: white;
+	border:6px solid #333;
+	right:0px;
+	top: 70px;
+	color: black;
+	text-align:center;
+}
+div.userpage{
+	height:50px;
+	width:150px;
+	position: absolute;
+	background-color: white;
+	border:6px solid #333;
+	right:0px;
+	top: 140px;
+	color: black;
+	text-align:center;
 }
