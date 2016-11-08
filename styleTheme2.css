@@ -1,6 +1,6 @@
 
 .heading{
-    background-color:#333;
+    background-color:#00001a;
 	font-family: "Andalus", Times, serif;
 	font-size: 200%;
 	font-style:bold;
@@ -47,7 +47,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    background-color: #0d0d0d;
 	position:absolute;
 	top: 200px;
 	left:0;
